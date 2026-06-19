@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>狼人杀法官端</title>
+    <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+<header>
+    <h1>狼人杀法官端</h1>
+    <p>电脑端用于开局、发牌、查看全部身份和汇总操作。第一晚流程由玩家手机端提交操作后自动推进。玩家手机请打开“玩家专用链接”。</p>
+</header>
+
+<main>
+    <section class="card" id="setupCard">
+        <h2>开局设置</h2>
+        <div class="grid two">
+            <label>模式
+                <select id="modeSelect"></select>
+            </label>
+            <label>人数
+                <select id="playerCount">
+                    <option value="12">12 人</option>
+                    <option value="13">13 人：额外加 1 平民</option>
+                </select>
+            </label>
+        </div>
+        <p class="hint" id="modeNote"></p>
+        <div class="actions">
+            <button id="startBtn">随机发牌 / 开局</button>
+            <button class="secondary" id="resetBtn">重置</button>
+            <button class="secondary" id="refreshBtn">刷新法官面板</button>
+        </div>
+    </section>
+
+    <section class="card" id="linkCard">
+        <h2>玩家专用链接</h2>
+        <div id="links"></div>
+        <p class="hint">把这个链接发给玩家。玩家打开后只会看到号码输入页；输入自己的号码后，只显示自己的身份；轮到该身份时才会显示可提交操作。提交后自动进入下一步；其他玩家页面会自动刷新。</p>
+        <p class="hint">本地运行时，手机和电脑必须在同一个 Wi‑Fi / 局域网。Windows 防火墙弹窗时允许 Java 专用网络访问。</p>
+    </section>
+
+    <section class="card" id="judgeCard">
+        <h2>法官面板</h2>
+        <div id="gameSummary"></div>
+        <details>
+            <summary>显示全部身份牌</summary>
+            <div id="roleList" class="role-list"></div>
+        </details>
+        <h3>第一晚流程 / 当前步骤（自动推进）</h3>
+        <div id="nightSteps"></div>
+        <h3>昨夜结果</h3>
+        <div id="nightResult"></div>
+        <h3>已提交操作</h3>
+        <div id="actionsLog" class="log"></div>
+    </section>
+</main>
+
+<script src="/app.js"></script>
+</body>
+</html>

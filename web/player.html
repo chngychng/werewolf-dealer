@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>狼人杀玩家端</title>
+    <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+<header>
+    <h1>狼人杀玩家端</h1>
+    <p>输入自己的号码后进入个人页面。此页面只显示该号码对应的身份和自己需要提交的第一晚操作；不会显示当前整体流程。</p>
+</header>
+
+<main class="player-main">
+    <section class="card" id="enterCard">
+        <h2>输入我的号码</h2>
+        <p class="hint" id="gameStatus">正在读取牌局状态……</p>
+        <label>我的号码
+            <input id="myNumber" type="number" min="1" max="13" placeholder="例如 7" inputmode="numeric" />
+        </label>
+        <div class="actions">
+            <button id="loadPlayerBtn">进入我的身份页</button>
+        </div>
+        <p class="hint">请只输入自己的号码。不要把手机交给其他玩家查看。</p>
+    </section>
+
+    <section class="card hidden" id="mineCard">
+        <div class="actions top-actions">
+            <button class="secondary" id="backBtn">切换号码 / 返回</button>
+            <button class="secondary" id="refreshBtn">刷新</button>
+        </div>
+        <div id="playerView" class="player-view"></div>
+    </section>
+</main>
+
+<script src="/player.js"></script>
+</body>
+</html>
