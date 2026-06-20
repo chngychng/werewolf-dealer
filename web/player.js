@@ -85,9 +85,7 @@ async function loadPlayer() {
 }
 
 function renderPlayer(player) {
-    const wolfInfo = player.visibleWolfNumbers && player.visibleWolfNumbers.length
-        ? `<p>你可见的狼队号码：<strong>${player.visibleWolfNumbers.join('、')} 号</strong></p>`
-        : '';
+    const wolfInfo = '';
     const nightInfo = renderNightInfo(player);
 
     $('enterCard').classList.add('hidden');
