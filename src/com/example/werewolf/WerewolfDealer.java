@@ -682,7 +682,7 @@ public class WerewolfDealer {
 
     private static Role villager() { return new Role("平民", "好人阵营", "没有夜间技能，白天通过发言和投票找出狼人。", List.of("第一晚无操作。"), false); }
     private static Role hybrid() { return new Role("混血儿", "好人阵营", "首夜选择一名玩家作为榜样，自己的胜利条件跟随榜样。系统不会告诉你榜样身份或阵营。", List.of("底牌显示为混血儿。被预言家查验按好人结果处理。"), false); }
-    private static Role wolf() { return new Role("狼人", "狼人阵营", "夜晚与狼队共同选择一名玩家击杀。", List.of("本工具会显示你可见的普通狼队友号码；特殊隐狼/假面是否互见按板子规则处理。"), false); }
+    private static Role wolf() { return new Role("狼人", "狼人阵营", "夜晚睁眼后与狼队共同选择一名玩家击杀。", List.of("身份底牌页不会提前显示狼队友号码, 任一人选择提交刀人目标即可。"), false); }
     private static Role seer() { return new Role("预言家", "好人阵营", "每晚查验一名玩家的阵营。", List.of("查验结果只反馈好人阵营/狼人阵营。"), false); }
     private static Role witch() { return new Role("女巫", "好人阵营", "拥有一瓶解药和一瓶毒药；本工具规则固定为女巫不能自救。", List.of("本工具会在天亮后根据狼刀、解药、毒药、守卫记录生成昨夜倒牌/平安夜结果。"), false); }
     private static Role hunter() { return new Role("猎人", "好人阵营", "出局时按房规可开枪带走一名玩家。", List.of("第一晚会查看并确认开枪状态。"), false); }
