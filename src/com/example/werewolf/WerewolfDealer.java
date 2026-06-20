@@ -686,7 +686,7 @@ public class WerewolfDealer {
     private static Role seer() { return new Role("预言家", "好人阵营", "每晚查验一名玩家的阵营。", List.of("查验结果只反馈好人阵营/狼人阵营。"), false); }
     private static Role witch() { return new Role("女巫", "好人阵营", "拥有一瓶解药和一瓶毒药；本工具规则固定为女巫不能自救。", List.of("本工具会在天亮后根据狼刀、解药、毒药、守卫记录生成昨夜倒牌/平安夜结果。"), false); }
     private static Role hunter() { return new Role("猎人", "好人阵营", "出局时按房规可开枪带走一名玩家。", List.of("第一晚会查看并确认开枪状态。"), false); }
-    private static Role idiot() { return new Role("白痴", "好人阵营", "被放逐时可翻牌免疫出局，但之后通常失去投票权。", List.of("第一晚不睁眼。"), false); }
+    private static Role idiot() { return new Role("白痴", "好人阵营", "白天出局时可以翻牌自证身份，但仍然会出局。", List.of("第一晚不睁眼"), false); }
     private static Role guard() { return new Role("守卫", "好人阵营", "每晚守护一名玩家，防止其因狼刀出局。", List.of("是否可连续守同一人、同守同救是否奶穿，按你们房规执行。"), false); }
     private static Role knight() { return new Role("骑士", "好人阵营", "白天可发动决斗，用于验证一名玩家是否为狼人。", List.of("第一晚不睁眼。"), false); }
     private static Role wolfBeauty() { return new Role("狼美人", "狼人阵营", "狼人阵营特殊牌。夜晚可魅惑一名玩家；自己出局时通常带走被魅惑者。", List.of("本工具只记录首夜魅惑目标，不自动结算后续死亡。"), false); }
